@@ -4,9 +4,6 @@
     import java.util.ArrayList;
 
     public class Admin extends Persona{
-
-
-
         private static ArrayList<Profesor> profesores = new ArrayList<>();
         private static ArrayList<Alumno> alumnos = new ArrayList<>();
         private static ArrayList<Curso> cursos = new ArrayList<>();
@@ -38,5 +35,25 @@
         public static void setCursos(ArrayList<Curso> cursos) {
             Admin.cursos = cursos;
         }
+        private static Profesor profesorAutenticado;
 
+    public static Profesor getProfesorAutenticado() {
+        return profesorAutenticado;
+    }
+
+    public static void setProfesorAutenticado(Profesor profesor) {
+        profesorAutenticado = profesor;
+    }
+    
+    
+    private static Alumno alumnoAutenticado;
+
+    public static Alumno getAlumnoAutenticado() {
+        return alumnoAutenticado;
+    }
+
+    public static void setAlumnoAutenticado(Alumno alumno) {
+        alumnoAutenticado = alumno;
+    }
+ 
     }

@@ -648,6 +648,7 @@ public class Administrador extends javax.swing.JFrame {
         
         // Obtén el profesor seleccionado en la fila
         Profesor profesorAActualizar = Admin.getprofesores().get(filaSeleccionada);
+        
 
         // Abre una nueva ventana de actualización de datos y pásale el profesor
         Actualizarprofesor actualizarVentana = new Actualizarprofesor();

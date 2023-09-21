@@ -24,8 +24,11 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="426" max="32767" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="90" max="-2" attributes="0"/>
+              <EmptySpace pref="417" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Btnaactualizara" max="32767" attributes="0"/>
+                  <Component id="Btnregresar" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -34,17 +37,30 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace pref="380" max="32767" attributes="0"/>
+              <Component id="Btnaactualizara" min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="Btnregresar" min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace pref="308" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="Btnaactualizara">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="ACTUALIZAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnaactualizaraActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btnregresar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="REGRESAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnregresarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

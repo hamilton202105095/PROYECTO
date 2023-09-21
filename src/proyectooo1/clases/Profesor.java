@@ -17,7 +17,5 @@ public class Profesor extends Persona {
     public Profesor(int codigo, String nombre, String apellido, String correo, String genero,String password ) {
         super(codigo, nombre, apellido, correo, genero, String.valueOf(codigo), password); // Contraseña por defecto: "1234"
     }
-      
- 
-    
+  
 }

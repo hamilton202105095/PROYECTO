@@ -128,16 +128,17 @@ public class Iniciosesion extends javax.swing.JFrame {
                 // No es el administrador, verificamos si es un profesor
                 boolean profesorEncontrado = false;
                 for (Profesor profesor : Admin.getprofesores()) {
-                    if (profesor.getCodigo() == Integer.parseInt(usuarioIngresado) && profesor.getPassword().equals(contrasenaIngresada)) {
-                        // Credenciales válidas para un profesor
-                        profesorEncontrado = true;
-                        JOptionPane.showMessageDialog(this, "Bienvenido, profesor " + profesor.getNombre());
-                        this.dispose();
-                        VistaProfesor vistap = new VistaProfesor();
-                        vistap.setVisible(true);
-                        break; // Salir del bucle si se encuentra un profesor válido
-                    }
-                }
+        if (profesor.getCodigo() == Integer.parseInt(usuarioIngresado) && profesor.getPassword().equals(contrasenaIngresada)) {
+            // Credenciales válidas para un profesor
+            Admin.setProfesorAutenticado(profesor); // Configura el profesor autenticado
+             profesorEncontrado = true;
+            JOptionPane.showMessageDialog(this, "Bienvenido, profesor " + profesor.getNombre());
+            this.dispose();
+            VistaProfesor vistap = new VistaProfesor();
+            vistap.setVisible(true);
+            break;
+        }
+    }
 
                 if (!profesorEncontrado) {
                     // No es el administrador ni un profesor, verificamos si es un usuario
@@ -145,6 +146,7 @@ public class Iniciosesion extends javax.swing.JFrame {
                     for (Alumno alumno : Admin.getAlumnos()) {
                         if (alumno.getCodigo() == Integer.parseInt(usuarioIngresado) && alumno.getPassword().equals(contrasenaIngresada)) {
                             // Credenciales válidas para un usuario
+                            Admin.setAlumnoAutenticado(alumno);
                             usuarioEncontrado = true;
                             JOptionPane.showMessageDialog(this, "Bienvenido, alumno " + alumno.getNombre());
                             this.dispose();
